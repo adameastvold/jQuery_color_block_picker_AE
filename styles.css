@@ -1,0 +1,47 @@
+div {
+
+}
+
+.red {
+  display: block;
+    float: left;
+    width: 150px;
+    height: 150px;
+    background: red;
+    border: 1px solid black;
+    margin-right: 5px;
+
+}
+
+.green {
+  display: block;
+    float: left;
+    width: 150px;
+    height: 150px;
+    background: green;
+    border: 1px solid black;
+    margin-right: 5px;
+
+}
+
+.yellow {
+  display: block;
+    float: left;
+    width: 150px;
+    height: 150px;
+    background: yellow;
+    border: 1px solid black;
+    margin-right: 5px;
+
+}
+
+.blue {
+  display: block;
+    float: left;
+    width: 150px;
+    height: 150px;
+    background: blue;
+    border: 1px solid black;
+    margin-right: 5px;
+
+}
