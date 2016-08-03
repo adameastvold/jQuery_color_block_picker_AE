@@ -1,23 +1,28 @@
-console.log('what up');
-
 $(document).ready(function(){
 
-// ==============================================================
+// ====================================================================
                 // This appends my div boxes to the container
-// ==============================================================
+// ====================================================================
 
   $('.container').append('<div class="box red"></div>' +
                          '<div class="box green"></div>' +
                          '<div class="box yellow"></div>' +
                          '<div class="box blue"></div>');
 
-  $('.red').data('color', 'red');
-  $('.green').data('color', 'green');
-  $('.yellow').data('color', 'yellow');
-  $('.blue').data('color', 'blue');
+// ====================================================================
+// This was my attempt to tackle .data(), but didn't end up using it :/
+// ====================================================================
+
+  // $('.red').data('color', 'red');
+  // $('.green').data('color', 'green');
+  // $('.yellow').data('color', 'yellow');
+  // $('.blue').data('color', 'blue');
 
   // console.log($('.red').data(), $('.green').data(), $('.yellow').data(), $('.blue').data());
 
+// ====================================================================
+//
+// ====================================================================
 
   var colorID = randomNumber(0, 3);
   var colorChosen;
@@ -47,20 +52,20 @@ $(document).ready(function(){
    $('.reset').append('<button type="button" class="resetButton">Play Again!</button>');
 });
 
-  $('.resetButton').on('click', function(){
-    $('.colorCaller').removeClass('.colorCaller');
-    $('.answerCaller').removeClass('.answerCaller');
-
+  $('.reset').click(function(){
+    location.reload();
   });
 
 
 
 });
 
-// ===============================================================
-//
-// // // POSSIBLE RANDOM NUMBER FUNCTION FOR USE BELOW
+//================================================================
+//    This was the provided random number generator function
+//================================================================
+
 function randomNumber(min, max){
     return Math.floor(Math.random() * (1 + max - min) + min);
 }
+
 //================================================================
