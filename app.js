@@ -1,62 +1,63 @@
-$(document).ready(function(){
-
 // ====================================================================
-                // This appends my div boxes to the container
+//            jQuery Color Block Picker - Adam Eastvold 8/3/2016
 // ====================================================================
 
+$(document).ready(function() {
 
-  $('.container').append('<div class="box red"></div>' +
-                         '<div class="box green"></div>' +
-                         '<div class="box yellow"></div>' +
-                         '<div class="box blue"></div>');
+    // ====================================================================
+    //              This appends my div boxes to the container
+    // ====================================================================
 
-// ====================================================================
-// This was my attempt to tackle .data(), but didn't end up using it :/
-// ====================================================================
 
-  // $('.red').data('color', 'red');
-  // $('.green').data('color', 'green');
-  // $('.yellow').data('color', 'yellow');
-  // $('.blue').data('color', 'blue');
+    $('.container').append('<div class="box red"></div>' +
+        '<div class="box green"></div>' +
+        '<div class="box yellow"></div>' +
+        '<div class="box blue"></div>');
 
-  // console.log($('.red').data(), $('.green').data(), $('.yellow').data(), $('.blue').data());
+    // ====================================================================
+    // This was my attempt to tackle .data(), but didn't end up using it :/
+    // ====================================================================
 
-// ====================================================================
-//
-// ====================================================================
+    // $('.red').data('color', 'red');
+    // $('.green').data('color', 'green');
+    // $('.yellow').data('color', 'yellow');
+    // $('.blue').data('color', 'blue');
 
-  var colorID = randomNumber(0, 3);
-  var colorChosen;
+    // console.log($('.red').data(), $('.green').data(), $('.yellow').data(), $('.blue').data());
 
-  if(colorID == 0){
-    $('.colorCaller').append('Red');
-    colorChosen = 'red';
-  } else if(colorID == 1){
-    $('.colorCaller').append('Green');
-    colorChosen = 'green';
-  } else if(colorID == 2){
-    $('.colorCaller').append('Yellow');
-    colorChosen = 'yellow';
-  } else if(colorID == 3){
-    $('.colorCaller').append('Blue');
-    colorChosen = 'blue';
-  };
+    // ====================================================================
+    //          This is the majority of the functionality
+    // ====================================================================
 
-  console.log(colorID);
+    var colorID = randomNumber(0, 3);
+    var colorChosen;
 
-  $('.box').on('click', function(){
-   if($(this).hasClass(colorChosen)){
-     $('.answerCaller').text('You Betcha');
-   } else {
-      $('.answerCaller').text('Try Again');
-   };
-   $('.reset').append('<button type="button" class="resetButton">Play Again!</button>');
-});
+    if (colorID == 0) {
+        $('.colorCaller').append('Red');
+        colorChosen = 'red';
+    } else if (colorID == 1) {
+        $('.colorCaller').append('Green');
+        colorChosen = 'green';
+    } else if (colorID == 2) {
+        $('.colorCaller').append('Yellow');
+        colorChosen = 'yellow';
+    } else if (colorID == 3) {
+        $('.colorCaller').append('Blue');
+        colorChosen = 'blue';
+    };
 
-  $('.reset').click(function(){
-    location.reload();
-  });
+    $('.box').on('click', function() {
+        if ($(this).hasClass(colorChosen)) {
+            $('.answerCaller').text('You Betcha');
+        } else {
+            $('.answerCaller').text('Try Again');
+        };
+        $('.reset').append('<button type="button" class="resetButton">Play Again!</button>');
+    });
 
+    $('.reset').click(function() {
+        location.reload();
+    });
 
 
 });
@@ -65,7 +66,7 @@ $(document).ready(function(){
 //    This was the provided random number generator function
 //================================================================
 
-function randomNumber(min, max){
+function randomNumber(min, max) {
     return Math.floor(Math.random() * (1 + max - min) + min);
 }
 
