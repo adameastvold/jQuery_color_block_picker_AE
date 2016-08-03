@@ -1,7 +1,22 @@
-div {
-
+h1 {
+  display: block;
+  text-align: center;
 }
 
+.container {
+  display: block;
+  padding-left: 400px;
+}
+
+.answerCaller {
+  display: block;
+  margin-top: 200px;
+}
+
+.reset {
+  padding-left: 675px;
+
+}
 .red {
   display: block;
     float: left;

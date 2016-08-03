@@ -4,6 +4,7 @@ $(document).ready(function(){
                 // This appends my div boxes to the container
 // ====================================================================
 
+
   $('.container').append('<div class="box red"></div>' +
                          '<div class="box green"></div>' +
                          '<div class="box yellow"></div>' +
@@ -45,9 +46,9 @@ $(document).ready(function(){
 
   $('.box').on('click', function(){
    if($(this).hasClass(colorChosen)){
-     $('.answerCaller').text('yes');
+     $('.answerCaller').text('You Betcha');
    } else {
-      $('.answerCaller').text('no');
+      $('.answerCaller').text('Try Again');
    };
    $('.reset').append('<button type="button" class="resetButton">Play Again!</button>');
 });
